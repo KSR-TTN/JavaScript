@@ -40,7 +40,7 @@ for (let i=0; i<say.length; i++) {
 
 // Explain difference between Bind and Call (example).
 
-// both bind and call are used for borrowing any function from another object.
+// both bind and call are used for borrowing any function from another object or function.
 // Bind returns a new function copy, allowing you to execute whenever you want. Call executes the function immediately.
 function person(hometown, state) {
     console.log(this.name + " is " + this.age + " years old and lives in " + hometown + ", " + state);
