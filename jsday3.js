@@ -21,7 +21,7 @@ console.log(developer.name);
 
 
 
-
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 
 // Given an array, say [1,2,3,4,5]. Print each element of an array after 3 secs.
@@ -45,6 +45,9 @@ for (let i=0; i<say.length; i++) {
 
 
 
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 
 // Explain difference between Bind and Call (example).
@@ -75,6 +78,9 @@ bindMethod();
 
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+
 // Explain 3 properties of argument object.
 
 // it is used when we have too may arguments in a function and we want to pass all the arguments in a single object.
@@ -86,6 +92,9 @@ bindMethod();
 
 
 
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 
 // Array methods examples
@@ -124,6 +133,9 @@ console.log(sum);
 
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+
 // Counter using closures
 function createCounter() {
     let count = 0;
@@ -151,6 +163,10 @@ console.log("count :",counter.getCount() );
 
 
 
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 
 // Create a function which returns number of invocations and number of instances of a function.

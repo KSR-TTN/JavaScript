@@ -9,6 +9,8 @@
 
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // 1. Let and Const
 let age = 25; 
 age = 26;
@@ -17,6 +19,7 @@ console.log("Age:", age);
 console.log("PI:", PI);
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 // 2. Block Scoping
 {
@@ -26,6 +29,7 @@ console.log("PI:", PI);
 // console.log(blockScope); 
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 // 3. Destructuring
 // Array Destructuring
@@ -44,6 +48,9 @@ const person = {
 const { name, city } = person;
 console.log(`Name: ${name}, City: ${city}`);
 
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // 4. Spread Operator
 // Array spread
 const arr1 = [1, 2, 3];
@@ -57,6 +64,9 @@ const details = { age: 30, occupation: "Developer" };
 const fullInfo = { ...basicInfo, ...details };
 console.log("Full info:", fullInfo);
 
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // 5. Arrow Functions
 // Regular function
 const multiply = function(x, y) {
@@ -67,6 +77,9 @@ const multiply = function(x, y) {
 const add = (x, y) => x + y;
 console.log("Multiplication:", multiply(5, 3));
 console.log("Addition:", add(5, 3));
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 // 6. Template Literals
 const user = "kapil";
