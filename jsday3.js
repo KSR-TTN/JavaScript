@@ -1,13 +1,15 @@
 // Create a hierarchy of person, employee and developers. 
-// created using Object.create() method which uses prototype chaining. 
-let person = {
-    name: "John",
-    age: 30,
-    city: "New York"
+
+// Created using Object.create() method which uses prototype chaining. 
+// (i have used the person name in prior question so i have used people here)
+let people = {
+    name: "Kapil",
+    age: 22,
+    city: "Delhi"
 }
 
-let employee=Object.create(person);
-employee.company = "Google";
+let employee=Object.create(people);
+employee.company = "TTN";
 
 let developer=Object.create(employee);
 developer.skills = "JS";
@@ -15,6 +17,10 @@ developer.skills = "JS";
 console.log(developer.skills);
 console.log(developer.company);
 console.log(developer.name);
+//From above lines we can see that developer object has access to all the properties of employee and people object.
+
+
+
 
 
 
@@ -38,9 +44,12 @@ for (let i=0; i<say.length; i++) {
 
 
 
+
+
+
 // Explain difference between Bind and Call (example).
 
-// both bind and call are used for borrowing any function from another object or function.
+// Both bind and call are used for borrowing a function for an object , the fuction could be inside any object or it also can be a normal function outside any object.
 // Bind returns a new function copy, allowing you to execute whenever you want. Call executes the function immediately.
 function person(hometown, state) {
     console.log(this.name + " is " + this.age + " years old and lives in " + hometown + ", " + state);
@@ -48,12 +57,12 @@ function person(hometown, state) {
 
 let obj1 = {
     name: "sachin",
-    age: 30,
+    age: 23,
 }
 
 let obj2 = {
     name: "kapil",
-    age: 30,
+    age: 22,
 }
 
 person.call(obj1, "mumbai", "maharashtra");
@@ -64,8 +73,9 @@ bindMethod();
 
 
 
-// Explain 3 properties of argument object.
 
+
+// Explain 3 properties of argument object.
 
 // it is used when we have too may arguments in a function and we want to pass all the arguments in a single object.
 // we can access the length of arguments using arguments.length
@@ -107,6 +117,8 @@ console.log(evenNumbers);
 // Executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(sum); 
+
+
 
 
 
