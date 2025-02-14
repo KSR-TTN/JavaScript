@@ -8,10 +8,10 @@ let people = {
     city: "Delhi"
 }
 
-let employee=Object.create(people);
+let employee = Object.create(people);
 employee.company = "TTN";
 
-let developer=Object.create(employee);
+let developer = Object.create(employee);
 developer.skills = "JS";
 
 console.log(developer.skills);
@@ -25,23 +25,20 @@ console.log(developer.name);
 
 
 // Given an array, say [1,2,3,4,5]. Print each element of an array after 3 secs.
-
-let say = [1,2,3,4,5];
-for (let i=0; i<say.length; i++) {
-   setTimeout(() => console.log(say[i]), 3000 + (i)*3000);
+// Using Promises and async/await
+function hold(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
 }
-// OR
-// let say2 = [1, 2, 3, 4, 5];
-// let index = 0;
-// let intervalId = setInterval(() => {
-//     console.log(say2[index]);
-//     index++;
-//     if (index === say2.length) {
-//         clearInterval(intervalId);
-//     }
-// }, 3000);
 
+const printDelay = async (arr) => {
+    for (let ele of arr) {
+        await hold(3000);
+        console.log(ele);
+    }
+};
 
+const nums = [1, 2, 3, 4, 5];
+printDelay(nums);
 
 
 
@@ -85,7 +82,7 @@ bindMethod();
 
 // it is used when we have too may arguments in a function and we want to pass all the arguments in a single object.
 // we can access the length of arguments using arguments.length
-// arguments are not available inside arrow functions.
+// we can iterate over arguments using for loop as it is array-like object
 // we can update the passed arguments using argumenti[index].
 
 
@@ -103,29 +100,29 @@ bindMethod();
 // Adds one or more elements to the end of an array and returns the new length of the array.
 let fruits = ["apple", "banana"];
 fruits.push("orange");
-console.log(fruits); 
+console.log(fruits);
 
 // 2.pop()
 // Removes the last element from an array and returns that element.
 let lastFruit = fruits.pop();
-console.log(lastFruit); 
-console.log(fruits); 
+console.log(lastFruit);
+console.log(fruits);
 
 // 3.map()
 // Creates a new array with the results of calling a provided function on every element in the calling array.
 let numbers = [1, 2, 3, 4];
 let doubled = numbers.map(num => num * 2);
-console.log(doubled); 
+console.log(doubled);
 
 // 4.filter()
 // Creates a new array with all elements that pass the test implemented by the provided function.
 let evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log(evenNumbers); 
+console.log(evenNumbers);
 
 // 5.reduce()
 // Executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum); 
+console.log(sum);
 
 
 
@@ -140,26 +137,26 @@ console.log(sum);
 function createCounter() {
     let count = 0;
     return {
-        increment: function() {
+        increment: function () {
             count++;
         },
-        decrement: function() {
+        decrement: function () {
             count--;
         },
-        getCount: function() {
+        getCount: function () {
             return count;
         }
     };
 }
 
 const counter = createCounter();
-console.log("count :",counter.getCount() ); 
+console.log("count :", counter.getCount());
 counter.increment();
-console.log("count :",counter.getCount() ); 
+console.log("count :", counter.getCount());
 counter.increment()
-console.log("count :",counter.getCount() ); 
+console.log("count :", counter.getCount());
 counter.decrement()
-console.log("count :",counter.getCount() ); 
+console.log("count :", counter.getCount());
 
 
 
@@ -176,14 +173,14 @@ function createFunctionTracker() {
 
     invocationCount++;
     return {
-        createInstance: function() {
+        createInstance: function () {
             instanceCount++;
             invocationCount++;
         },
-        getInvocationCount: function() {
+        getInvocationCount: function () {
             return invocationCount;
         },
-        getInstanceCount: function() {
+        getInstanceCount: function () {
             return instanceCount;
         }
     };
@@ -191,9 +188,9 @@ function createFunctionTracker() {
 
 
 let tracker = createFunctionTracker();
-console.log("InvocationCount :",tracker.getInvocationCount()," InstanceCount :", tracker.getInstanceCount()); 
+console.log("InvocationCount :", tracker.getInvocationCount(), " InstanceCount :", tracker.getInstanceCount());
 tracker.createInstance();
-console.log("InvocationCount :",tracker.getInvocationCount()," InstanceCount :", tracker.getInstanceCount()); 
+console.log("InvocationCount :", tracker.getInvocationCount(), " InstanceCount :", tracker.getInstanceCount());
 tracker.createInstance();
-console.log("InvocationCount :",tracker.getInvocationCount()," InstanceCount :", tracker.getInstanceCount()); 
+console.log("InvocationCount :", tracker.getInvocationCount(), " InstanceCount :", tracker.getInstanceCount());
 
