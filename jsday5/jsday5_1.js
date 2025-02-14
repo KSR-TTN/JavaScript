@@ -1,5 +1,5 @@
 import  methods  from "./jsday5_2.js";
-
+import filterUnique from "./jsday5_3.js";
 
 // ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -136,7 +136,7 @@ console.log(`Surface area of cylinder: ${cylinderArea}`);
 // using imported method filterUnique
 const numbers = [1, 2, 2, 3, 3, 4, 5, 5];
 
-const uniqueNumbers = methods.filterUnique(numbers);
+const uniqueNumbers = filterUnique(numbers);
 console.log("Original:", numbers);
 console.log("Filtered Array :", uniqueNumbers);
 
