@@ -7,9 +7,9 @@ import filterUnique from "./jsday5_3.js";
 // Filter unique array members using Set
 
 // working -
-// firstly we are creating a set of the array
-// then we are converting the set to an array
-// finally we are returning the array
+// firstly I have created a set of the array
+// then converting the set to an array using spread operator
+// finally returning the array
 const nums = [1, 2, 2, 3, 4, 4, 5];
 const uniqueNums = [...new Set(nums)];
 console.log("Original array:", nums);
@@ -21,11 +21,12 @@ console.log("Unique numbers:", uniqueNums);
 
 
 // Example of a class with static functions
-// function working -
+
+// working -
 // firstly creating a class with static methods
 // then adding static methods to the class
 // then calling the static methods using the class name
-// finally are calling the static methods using the instance of the class
+// finally calling the static methods using the instance of the class
 
 
 class Calculator {
@@ -63,7 +64,7 @@ console.log("Static Multiply:", Calculator.multiply(15, 5));
 console.log("Static Divide:", Calculator.divide(15, 5));
 console.log("Static Power:", Calculator.power(3, 2));
 
-// Call using instance 
+// Call using instance (for calling using instance i have used constructor of the class
 console.log("Calling static methods through instance :");
 console.log("Instance Add:", calc.constructor.add(20, 10));
 console.log("Instance Subtract:", calc.constructor.subtract(20, 10));
@@ -82,11 +83,11 @@ console.log("Instance Power:", calc.constructor.power(4, 2));
 // Flattening a nested array using arrow functions
 
 // function working -
-// we are using reduce function to flatten the array
-// we are checking if the item is an array or not
-// if it is an array then we are calling the function to flatten the array
-// if it is not an array then we are pushing the item in the array
-// finally we are returning the flattened array
+// I am using reduce function to flatten the array
+// then checking if the item is an array or not
+// if it is an array then i am calling the function to flatten the array
+// if it is not an array then i am pushing the item in the array
+// finally returning the flattened array
 const flattenArray = (arr) => arr.reduce((flat, item) => 
     Array.isArray(item) ? [...flat, ...flattenArray(item)] : [...flat, item], 
 []);
@@ -147,15 +148,13 @@ console.log("Filtered Array :", uniqueNumbers);
 
 // Filter anagrams using Map.
 
-// in following example we are filtering anagrams from a set of wordsArray 
-// function working -
-
+// working -
 // creating empty map
-// then we are sorting each individual word 
+// then sorting each individual word 
 // then checking with if condition that is it present in map or not 
-// if not present then we are setting it as a key and value as an array
-// if present then we are pushing the word in the array of that key
-// finally we are returning the array of words from the map 
+// if not present then setting it as a key and value as an array
+// if present then pushing the word in the array of that key
+// finally returning the array of words from the map 
 function filterAnagrams(wordArray) {
     let map = new Map();
 
@@ -168,7 +167,6 @@ function filterAnagrams(wordArray) {
         map.get(sortedWord).push(word);
     }
 
-    // Map -> array
     return Array.from(map.values());
 }
 
@@ -184,11 +182,11 @@ console.log(filterAnagrams(testSet));
 
 // Write a program to implement inheritance upto 3 classes.The Class must contain private and public variables and static functions.
 
-// function working -
-// firstly we are creating a class with private and public variables
-// then we are creating a class that extends the first class
-// then we are creating a class that extends the second class
-// finally we are calling the static methods using the class name
+// working -
+// firstly creating a class with private and public variables
+// then creating a class that extends the first class
+// then creating a class that extends the second class
+// finally calling the static methods using the class name
 
 
 class Product {
